@@ -1,0 +1,90 @@
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+  color: #06A3DA;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: #06A3DA;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 80%; 
+  border: 1px solid #06A3DA  ;
+}
+
+/* Off-canvas menu */
+.link nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .link {
+    position: relative;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .link nav {
+    display: none;
+    flex-direction: column;
+    width: 250px; /* Adjust width as needed */
+    background: #fff;
+    position: fixed; /* Fixed position for off-canvas effect */
+    top: 10%;
+    right: 10px; /* Align to the right */
+    height: 23%; /* Full height */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure menu is above other content */
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Start off-screen */
+  }
+
+  .link.open nav {
+    display: flex;
+    transform: translateX(0); /* Slide in when menu is open */
+  }
+
+  .link nav a {
+    padding-top: 2px;
+  text-align: center;
+  }
+
+  .link nav a:last-child {
+    border-bottom: none;
+  }
+}

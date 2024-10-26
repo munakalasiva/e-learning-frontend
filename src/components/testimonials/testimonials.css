@@ -1,0 +1,65 @@
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: #06A3DA;
+    margin-bottom: 30px;
+  }
+
+  .testmonials-cards {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px; /* Additional space for better scrolling */
+    scroll-snap-type: x mandatory;
+
+    .testimonial-card {
+      flex: 0 0 auto;
+      background-color: white;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-snap-align: center;
+
+      .student-image {
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+        }
+      }
+
+      .message {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .info {
+        text-align: center;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #06A3DA;
+        margin-bottom: 5px;
+      }
+
+      .position {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}

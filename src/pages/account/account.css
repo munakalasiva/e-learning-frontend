@@ -1,0 +1,77 @@
+.auth-pag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../images/background.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-for {
+  width: 400px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.244);
+  font-family: Arial, sans-serif;
+  border: 1px solid #102f5dd0;
+}
+
+.auth-for h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-form a {
+  text-decoration: none;
+  color: #2678f4;
+  margin-left: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.common-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #102f5dd0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.common-btn svg {
+  margin-right: 5px;
+}
+
+.common-btn:hover {
+  background-color: #1e60c2;
+}
+
+.profile-info{
+  background-color: #ffffff;
+  border: 1px solid #102f5dd0;
+  color: black;
+}
+.info{
+  
+  padding-left: 15px;
+}
