@@ -40,8 +40,9 @@ const Service = () => {
                 style={{ 
                   border: '3px solid #ddd', 
                   borderRadius: '10px solid grey',
-                  height:"250px", 
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' 
+                  height:"300px", 
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
+            
                 }}
               >
                 <div className="p-4">
