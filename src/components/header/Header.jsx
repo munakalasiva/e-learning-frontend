@@ -20,6 +20,7 @@ const Header = ({ isAuth }) => {
           <Link to={"/"} onClick={toggleMenu}>Home</Link>
           <Link to={"/courses"} onClick={toggleMenu}>Courses</Link>
           <Link to={"/about"} onClick={toggleMenu}>About</Link>
+          <Link to={"/contactus"} onclick={toggleMenu}>ContactUs</Link>
           {isAuth ? (
             <Link to={"/account"} onClick={toggleMenu}>Account</Link>
           ) : (

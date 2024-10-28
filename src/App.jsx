@@ -26,6 +26,7 @@ import ResetPassword from "./pages/auth/ResetPassword";
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from "./components/TermsAndConditions";
 import RefundsOrCancellations from "./components/RefundsOrCancellations";
+import ContactUs from './components/ContactUs';
 
 const App = () => {
   const { isAuth, user, loading } = UserData();
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/contactus" element={<ContactUs/>} />
             <Route
               path="/account"
               element={isAuth ? <Account user={user} /> : <Login />}
