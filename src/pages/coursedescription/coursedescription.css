@@ -66,6 +66,8 @@
   color: #000000;
   margin-bottom: 5px;
   text-decoration: underline;
+  margin:0px !important;
+  text-align:start !important;
 }
 
 .section-content {

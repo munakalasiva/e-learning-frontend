@@ -28,6 +28,8 @@ const ContactUs = () => {
               </a>
               <div className="ps-4">
                 <h5 className="text-primary mb-2">Call to ask any question</h5>
+                <h6>CONTACT MUNAKALA SIVA</h6>
+                <br/>
                 <h6 className="mb-0">+91 7799902140</h6>
               </div>
             </div>
