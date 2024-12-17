@@ -9,7 +9,7 @@ import { NextArrow, PrevArrow } from './ArrowComponent';
 
 // Import images
 import slide1 from '../../assets/images/slide1.jpg';
-import slide2 from '../../assets/images/slide2.jpg';
+import slide2 from "../../assets/images/freepik-export-202412031015403gdf.png";
 import slide3 from '../../assets/images/rm373batch13-blogbanner-05.jpg';
 
 
@@ -38,7 +38,7 @@ const CarouselComponent = () => {
           </div>
         </div>
         <div className="carousel-slide">
-          <img src={slide3} alt="Second slide" />
+          <img src={slide2} alt="Second slide" />
           <div className="carousel-text"></div>
         </div>
        

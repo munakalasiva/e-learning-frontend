@@ -11,7 +11,7 @@ const PaymentSuccess = ({ user }) => {
           <h2>Payment successful</h2>
           <p>Your course subscription has been activated</p>
           <p>Reference no - {params.id}</p>
-          <Link to={`/${user._id}/dashboard`} className="common-btn">
+          <Link to={`/${user._id}/dashboard`} className="dashboard-btn">
             Go to Dashboard
           </Link>
         </div>
@@ -21,3 +21,5 @@ const PaymentSuccess = ({ user }) => {
 };
 
 export default PaymentSuccess;
+
+

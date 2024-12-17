@@ -21,6 +21,7 @@
   .section-title h1 {
     margin-bottom: 0;
     color:#1C1919;
+    font-size:24px;
   }
   
   .bg-primary {
@@ -35,7 +36,7 @@
     color: #31B0EA!important;
     font-size:30px;
   }
-  
+ 
   .ps-4 {
     padding-left: 1.5rem !important;
   }

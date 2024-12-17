@@ -21,150 +21,130 @@ const CourseDescription = ({ user }) => {
   useEffect(() => {
     fetchCourse(params.id);
   }, []);
-  
 
-  const amount = course.price *(100);
-  const currency = "INR";
-  const receiptId = "qwsaq1";
+  const checkoutHandler = async () => {
+    const token = localStorage.getItem("token");
+    setLoading(true);
 
-  const paymentHandler = async (e) => {
-    const response = await fetch("http://localhost:5001/order", {
-      method: "POST",
-      body: JSON.stringify({
-        amount,
-        currency,
-        receipt: receiptId,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const order = await response.json();
-    console.log(order);
+    const {
+      data: { order },
+    } = await axios.post(
+      `${server}/api/course/checkout/${params.id}`,
+      {},
+      {
+        headers: {
+          token,
+        },
+      }
+    );
 
-    var options = {
-      key: "rzp_test_uXN6JVvjiabE8w", // Enter the Key ID generated from the Dashboard
-      amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency,
-      name: "Vaarush technologies", //your business name
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
+    const options = {
+      key: "rzp_live_EJ1uL8fl3cvGHL", // Enter the Key ID generated from the Dashboard
+      amount: order.id, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "E learning", //your business name
+      description: "Learn with us",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: async function (response) {
-        const body = {
-          ...response,
-        };
 
-        const validateRes = await fetch(
-          "http://localhost:5001/order/validate",
-          {
-            method: "POST",
-            body: JSON.stringify(body),
-            headers: {
-              "Content-Type": "application/json",
+      handler: async function (response) {
+        const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
+          response;
+
+        try {
+          const { data } = await axios.post(
+            `${server}/api/verification/${params.id}`,
+            {
+              razorpay_order_id,
+              razorpay_payment_id,
+              razorpay_signature,
             },
-          }
-        );
-        const jsonRes = await validateRes.json();
-        console.log(jsonRes);
-      },
-      prefill: {
-        //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
-        name: "siva munakala", //your customer's name
-        email: "webdevmatrix@example.com",
-        contact: "9000000000", //Provide the customer's phone number for better conversion rates
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
+            {
+              headers: {
+                token,
+              },
+            }
+          );
+          console.log(`user id value${params.id}`);
+          await fetchUser();
+          await fetchCourses();
+          await fetchMyCourse();
+          toast.success(data.message);
+          setLoading(false);
+          navigate(`/payment-success/${razorpay_payment_id}`);
+        } catch (error) {
+          toast.error(error.response.data.message);
+          setLoading(false);
+        }
       },
       theme: {
-        color: "#3399cc",
+        color: "#8a4baf",
       },
     };
-    var rzp1 = new window.Razorpay(options);
-    rzp1.on("payment.failed", function (response) {
-      alert(response.error.code);
-      alert(response.error.description);
-      alert(response.error.source);
-      alert(response.error.step);
-      alert(response.error.reason);
-      alert(response.error.metadata.order_id);
-      alert(response.error.metadata.payment_id);
-    });
-    rzp1.open();
-    e.preventDefault();
-  };
+    const razorpay = new window.Razorpay(options);
 
+    razorpay.open();
+  };
 
   return (
     <>
       {loading ? (
         <Loading />
-      ) : (
+      ) :  (
         <>
           {course && (
             <div className="course-description">
               <div className="course-header">
-                <img
-                  src={`${server}/${course.image}`}
-                  alt=""
-                  className="course-image"
-                />
+                <img src={`${server}/${course.image}`} alt="" className="course-image" />
                 <div className="course-info">
-                  <h2 class="course-title">{course.title}</h2>
-                  <p>Duration: {course.duration} weeks</p>
+                  <h2 className="course-title">{course.title}</h2>
+                  <p className="">Duration: {course.duration} weeks</p>
                 </div>
               </div>
-              
-              <div class="course-container">
-
-              <div class="course-section">
-              <h3 class="section-title">Description:</h3> 
-              <p class="section-content">{course.description}</p>
-              </div>
-
-              <div class="course-section">
-              <h3 class="section-title">Who Can Learn This Course:</h3> 
-              <p class="section-content">{course.learn}</p>
-              </div>
-               
-              <div class="course-section">
-              <h3 class="section-title">Benefits:</h3> 
-              <p class="section-content">{course.benefits}</p>
-              </div>
-
-              <div class="course-section">
-              <h3 class="section-title">Market Demand:</h3> 
-              <p class="section-content">{course.demand}</p>
-              </div>
-
-              <div class="course-section">
-              <h3 class="section-title">Scope:</h3> 
-              <p class="section-content">{course.scope}</p>
-              </div>
-
-              <div class="course-section">
-              <h3 class="section-title">Job Positions:</h3> 
-              <p class="section-content">{course.positions}</p>
-              </div>
-
-              </div>
-
-              <p>Let's get started with course At ₹{course.price}</p>
-
-
-
-
+              <div className="course-container">
+      
+                <div className="course-section">
+                <h3 className="section-title">Description:</h3> 
+                <p className="section-content">{course.description}</p>
+                </div>
+      
+                <div className="course-section">
+                <h3 className="section-title">Who Can Learn This Course:</h3> 
+                <p className="section-content">{course.learn}</p>
+                </div>
+                
+                <div className="course-section">
+                <h3 className="section-title">Benefits:</h3> 
+                <p className="section-content">{course.benefits}</p>
+                </div>
+      
+                <div className="course-section">
+                <h3 className="section-title">Market Demand:</h3> 
+                <p className="section-content">{course.demand}</p>
+                </div>
+      
+                <div className="course-section">
+                <h3 className="section-title">Scope:</h3> 
+                <p className="section-content">{course.scope}</p>
+                </div>
+      
+                <div className="course-section">
+                <h3 className="section-title">Job Positions:</h3> 
+                <p className="section-content">{course.positions}</p>
+                </div>
+      
+                </div>
+                
+              <p className="price-para">Let's get started with the course at ₹{course.price}</p>
               {user && user.subscription.includes(course._id) ? (
                 <button
                   onClick={() => navigate(`/course/study/${course._id}`)}
                   className="common-btn"
                 >
-                  Study
+                  STUDY
                 </button>
               ) : (
-                <button onClick={paymentHandler} className="common-btn">
-                  Buy Now
+                <button onClick={checkoutHandler} className="common-btn">
+                  BUY NOW
                 </button>
               )}
             </div>
@@ -176,3 +156,8 @@ const CourseDescription = ({ user }) => {
 };
 
 export default CourseDescription;
+
+
+
+
+

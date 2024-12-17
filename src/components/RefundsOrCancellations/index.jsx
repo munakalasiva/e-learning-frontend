@@ -10,7 +10,7 @@ const RefundsOrCancellations = () => {
       <p>
         Cancellations can be requested within 24 hours of making a purchase.
         If a cancellation is requested after the product/service has been delivered or initiated, the cancellation request will not be accepted.
-        To request a cancellation, please contact our support team at <a href="mailto:info@Vaarush.com">info@Vaarush.com</a> with your order details.
+        To request a cancellation, please contact our support team at <a href="mailto:info@Vaarush.in">info@Vaarush.in</a> with your order details.
       </p>
 
       <h2>2. Refund Policy</h2>
@@ -35,7 +35,7 @@ const RefundsOrCancellations = () => {
 
       <h2>3. Refund Request Process</h2>
       <p>
-        To initiate a refund, please email us at <a href="mailto:info@Vaarush.com">info@Vaarush.com</a> with your order number and a detailed reason for your refund request. 
+        To initiate a refund, please email us at <a href="mailto:info@Vaarush.in">info@Vaarush.in</a> with your order number and a detailed reason for your refund request. 
         Our team will review your request and respond within 3-5 business days.
       </p>
 
@@ -43,7 +43,7 @@ const RefundsOrCancellations = () => {
       <p>
         If you haven’t received a refund within the specified period, please first check your bank account again.
         Then, contact your credit card company, as it may take some time before your refund is officially posted.
-        If you’ve done all of this and still have not received your refund, please contact us at <a href="mailto:info@Vaarush.com">info@Vaarush.com</a>.
+        If you’ve done all of this and still have not received your refund, please contact us at <a href="mailto:info@Vaarush.in">info@Vaarush.in</a>.
       </p>
 
       <h2>5. Changes to This Policy</h2>

@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Service.css";
 
 const services = [
   {
@@ -32,7 +33,7 @@ const Service = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        <div className="row g-4">
+        <div className="row g-4 service-card">
           {services.map((service, index) => (
             <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay={service.delay} key={index}>
               <div 

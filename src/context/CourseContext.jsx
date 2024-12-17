@@ -33,8 +33,11 @@ export const CourseContextProvider = ({ children }) => {
       const { data } = await axios.get(`${server}/api/mycourse`, {
         headers: {
           token: localStorage.getItem("token"),
+          
         },
+        
       });
+      console.log("Token:", localStorage.getItem("token"));
 
       setMyCourse(data.courses);
     } catch (error) {

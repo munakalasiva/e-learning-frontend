@@ -109,7 +109,7 @@ const Testimonials = () => {
             });
           }, 1000); // Delay to show the last card before resetting
         }
-      }, 3000); // Adjust the interval time as needed
+      }, 5000); // Adjust the interval time as needed
 
       return () => clearInterval(scrollInterval);
     }

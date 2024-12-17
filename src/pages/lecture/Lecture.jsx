@@ -6,6 +6,7 @@ import { server } from "../../main";
 import Loading from "../../components/loading/Loading";
 import toast from "react-hot-toast";
 import { TiTick } from "react-icons/ti";
+import { ImArrowRight } from "react-icons/im";
 
 const Lecture = ({ user }) => {
   const [lectures, setLectures] = useState([]);
@@ -181,7 +182,7 @@ const Lecture = ({ user }) => {
               ) : (
                 <>
                   {lecture.video ? (
-                    <>
+                    <div>
                       <video
                         src={`${server}/${lecture.video}`}
                         width={"100%"}
@@ -194,9 +195,9 @@ const Lecture = ({ user }) => {
                       ></video>
                       <h1>{lecture.title}</h1>
                       <h3>{lecture.description}</h3>
-                    </>
+                    </div>
                   ) : (
-                    <h1>Please Select a Lecture</h1>
+                    <h1>Please Select a Lecture  <ImArrowRight /></h1>
                   )}
                 </>
               )}

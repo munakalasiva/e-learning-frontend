@@ -57,8 +57,8 @@ const Courses = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h3 className="section-title bg-white text-center fw-bold " style={{ color: '#06A3DA' }}>Courses</h3>
-          <h4 className="mb-5">Popular Courses</h4>
+          <h3 className="section-title text-center fw-bold " style={{ color: '#06A3DA' }}>Courses</h3>
+          <h4 className="mb-3">Popular Courses</h4>
         </div>
         <ScrollContainer className="row g-4 justify-content-center">
           {courses.map((course, index) => (

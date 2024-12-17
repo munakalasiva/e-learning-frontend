@@ -1,0 +1,14 @@
+.service-card .service-item {
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    height: 300px;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1); 
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+  @media (max-width: 768px){
+    .service-card .service-item{
+    height:auto !important;
+  }
+}

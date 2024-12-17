@@ -1,3 +1,4 @@
+//import react from "react";
 import React from "react";
 import "./courseCard.css";
 import { server } from "../../main";

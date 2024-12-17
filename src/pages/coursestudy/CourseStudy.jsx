@@ -20,7 +20,7 @@ const CourseStudy = ({ user }) => {
     <>
       {course && (
         <div className="course-study-page">
-          <img src={`${server}/${course.image}`} alt="" width={350} />
+          <img src={`${server}/${course.image}`} alt="" width={300} />
           <div className="content">
           <h2><span className="main">Title  :  </span> {course.title}</h2>
           <h4><span className="main">Description:</span>   {course.description}</h4>

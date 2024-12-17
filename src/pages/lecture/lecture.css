@@ -1,4 +1,4 @@
-.lecture-page {
+/**.lecture-page {
   display: flex;
   justify-content: space-between;
   min-height: 80vh;
@@ -91,4 +91,178 @@
   margin: 3px auto;
   text-align: center;
   color: white;
+} **/
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
+
+.lecture-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height:80vh;
+}
+
+
+
+.left,
+.right {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.left video {
+  border-radius: 8px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.left h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.left h3 {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Right Section */
+.right .common-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  max-width:200px;
+}
+
+.right .common-btn:hover {
+  background: #0056b3;
+}
+
+.lecture-form {
+  margin-top: 20px;
+}
+
+.lecture-form h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.lecture-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.lecture-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.lecture-number {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lecture-number.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.lecture-number:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .lecture-page {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    padding: 15px;
+  }
+
+  .left h1 {
+    font-size: 1.3rem;
+  }
+
+  .left h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .left h1 {
+    font-size: 1.2rem;
+  }
+
+  .left h3 {
+    font-size: 0.8rem;
+  }
+
+  .right .common-btn {
+    padding: 8px 12px;
+  }
+
+  .lecture-form input {
+    padding: 6px;
+  }
+
+  .lecture-number {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lecture-page {
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    padding: 10px;
+  }
+
+  .left h1 {
+    font-size: 1rem;
+  }
+
+  .left h3 {
+    font-size: 0.7rem;
+  }
+
+  .right .common-btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .lecture-form input {
+    padding: 5px;
+  }
+
+  .lecture-number {
+    padding: 6px;
+  }
+}
+

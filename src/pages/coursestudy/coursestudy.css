@@ -15,13 +15,31 @@
   border-radius: 8px;
   object-fit: cover;
 }
+.course-study-page .lec-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course-study-page .lec-btn:hover {
+  background-color: #0056b3;
+}
 
 .content {
-    border:2px solid black;
     text-align:start;
     padding:10px;
     border-radius:5px;
     width:50%;
+    background-color:#F5F2FB;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.1);
+   
 }
 
 .content h2,
@@ -82,6 +100,10 @@ a h2:hover {
     width: 100%;
     max-width: 350px;
     margin-bottom: 15px;
+  }
+  .course-study-page .lec-btn {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .content {
