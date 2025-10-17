@@ -25,7 +25,7 @@ const Footer = () => {
         <p className="copyright">
           &copy; 2024 Your Vaarush E-Learning Platform. All rights reserved. <br />
         </p>
-        <div className="social-links">
+        {/* <div className="social-links">
         <a href="https://www.linkedin.com/in/vaarush-technologies-official-95244a301/">
         <FaLinkedin />
           </a>
@@ -35,7 +35,7 @@ const Footer = () => {
           <a href="https://www.youtube.com/@VaarushTechnologies">
             <FaYoutube />
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
