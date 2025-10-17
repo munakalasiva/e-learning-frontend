@@ -1,5 +1,5 @@
 import React from 'react';
-import pencil from '../../assets/images/pencil.png';
+import pencil from '../../assets/images/pencil.jpg';
 import certificate from "../../assets/images/certificate.jpg";
 import Aboutpick from '../../assets/images/chose_us.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,7 +38,7 @@ const About = ({isAuth}) => {
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
               
               <h4 className="mb-4">All the skills you need in one place</h4>
-              <p className="mb-4">At Vaarush eLearning, our mission is to provide high-quality, accessible, and engaging educational content to learners worldwide. We are dedicated to empowering individuals through education, enabling them to achieve their personal and professional goals.</p>
+              <p className="mb-4">At Apra Nova eLearning, our mission is to provide high-quality, accessible, and engaging educational content to learners worldwide. We are dedicated to empowering individuals through education, enabling them to achieve their personal and professional goals.</p>
               <div className="row gy-2 gx-4">
                 <div className="col-sm-6">
                   <p className="mb-0"><FaArrowRight /> Skilled Instructors</p>

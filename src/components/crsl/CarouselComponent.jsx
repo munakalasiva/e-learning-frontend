@@ -33,7 +33,7 @@ const CarouselComponent = () => {
       <Slider {...settings}>
         <div className="carousel-slide">
           <img src={slide1} alt="First slide" />
-          <div className="carousel-text"><h1 className="head">Welcome to our Vaarush E-learning Platform</h1>
+          <div className="carousel-text"><h1 className="head">Welcome to our Apra Nova E-learning Platform</h1>
           <p>Learn, Grow, Excel</p>
           </div>
         </div>

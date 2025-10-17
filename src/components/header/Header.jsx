@@ -19,7 +19,7 @@ const Header = ({ isAuth }) => {
       <Container>
         <Navbar.Brand>
           <Link to="/" className="navbar-logo">
-            Vaarush E-Learning
+            Apra Nova E-Learning
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} />
